@@ -30,7 +30,9 @@ workflows:
       cocoapods: default
     scripts:
       - name: Get Flutter dependencies
-        script: flutter pub get
+        script: |
+          flutter pub get
+          flutter create .
       - name: Precache iOS artifacts
         script: flutter precache --ios
       - name: Build iOS

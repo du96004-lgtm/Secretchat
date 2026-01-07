@@ -1,47 +1,26 @@
-# Set platform to 13.0
+# The next line is used by fastlane to identify the step.
+# @target_sdk: ios
+
 platform :ios, '13.0'
 
 # CocoaPods analytics sends network stats synchronous priority.
 # Disable this for faster builds.
 install! 'cocoapods', :deterministic_uuids => false
 
-# Resolve podhelper.rb path
-podhelper_path = File.join(File.dirname(File.realpath(__FILE__)), 'Flutter', 'podhelper.rb')
-if !File.exist?(podhelper_path)
-  # Try to find it in FLUTTER_ROOT (standard in CI environments like Codemagic)
-  flutter_root = ENV['FLUTTER_ROOT']
-  if flutter_root
-    podhelper_path = File.join(flutter_root, 'packages', 'flutter_tools', 'bin', 'podhelper.rb')
-  end
-end
-
-if File.exist?(podhelper_path)
-  load podhelper_path
-else
-  puts "Warning: podhelper.rb not found. Flutter plugins may not be installed correctly."
-end
+load File.join(File.dirname(File.realpath(__FILE__)), 'Flutter', 'podhelper.rb')
 
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  if respond_to?(:flutter_install_all_ios_pods)
-    flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
-  end
-  
-  target 'RunnerTests' do
-    inherit! :search_paths
-  end
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if respond_to?(:flutter_additional_ios_build_settings)
-      flutter_additional_ios_build_settings(target)
-    end
+    flutter_additional_ios_build_settings(target)
     target.build_configurations.each do |config|
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'PERMISSION_CAMERA=1', 'PERMISSION_MICROPHONE=1']
     end
   end
 end
