@@ -31,9 +31,8 @@ workflows:
     scripts:
       - name: Get Flutter dependencies
         script: flutter pub get
-      - name: Install pod dependencies
-        script: |
-          cd ios && pod install
+      - name: Precache iOS artifacts
+        script: flutter precache --ios
       - name: Build iOS
         script: |
           flutter build ios --release --no-codesign
