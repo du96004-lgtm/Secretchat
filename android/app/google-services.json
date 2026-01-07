@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "6695969774",
+    "firebase_url": "https://secretchat-e7563-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "secretchat-e7563",
+    "storage_bucket": "secretchat-e7563.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6695969774:android:8edac2fd310c77625a24ff",
+        "android_client_info": {
+          "package_name": "com.antigravity.secretchat.secretchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6695969774-qdj5caaavau4b1pso723ap72dc0gtb5r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.antigravity.secretchat.secretchat",
+            "certificate_hash": "2e801b2c8e5708b9c15808fe8a3c6e2ae7085417"
+          }
+        },
+        {
+          "client_id": "6695969774-nh5uic4jpjrltvu7sqjp3ku8h9a8i13l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOrFFRMy-ZvX6nEB-X9D0N8zXCcQjlWS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6695969774-nh5uic4jpjrltvu7sqjp3ku8h9a8i13l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "6695969774-5i88u2dnsvvv3iohhk1jq7k16itr2c4v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.antigravity.secretchat.secretchat"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6695969774:android:aa4db29ac20c393c5a24ff",
+        "android_client_info": {
+          "package_name": "com.secretchat.secretchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6695969774-nh5uic4jpjrltvu7sqjp3ku8h9a8i13l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOrFFRMy-ZvX6nEB-X9D0N8zXCcQjlWS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6695969774-nh5uic4jpjrltvu7sqjp3ku8h9a8i13l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "6695969774-5i88u2dnsvvv3iohhk1jq7k16itr2c4v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.antigravity.secretchat.secretchat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
